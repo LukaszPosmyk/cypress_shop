@@ -10,6 +10,7 @@ const phoneField = '#billing_phone'
 const emailField = '#billing_email'
 const finishOrderButton = '#place_order'
 const countryDropdownPoland = 'Polska'
+const orderID = '.woocommerce-order-overview__order'
 
 
 class OrderPage{
@@ -29,7 +30,7 @@ class OrderPage{
     }
 
     checkOrderFinished(){
-        cy.contains('Numer zamówienia:', {timeout: 10000 }).should('exist')
+        cy.get(orderID, {timeout: 15000}).should('exist')
     }
 }
 

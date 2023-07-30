@@ -5,19 +5,15 @@ const dataBlockNameNew = 'div[data-block-name="woocommerce/product-new"]'
 const checkCartFromProductLevel =  '.added_to_cart'
 
 
-before(function () {
-    cy.fixture('products').as('productsData')
-})
-
 class HomePage{
 
     clickMyAccounntHeaderButton(){
         cy.get(myAccountHeaderButton).click()
     }
 
-    addProductToCart(){
+    addProductToCart(product){
         cy.get(dataBlockNameNew).within(()=>{
-            cy.get(this.products.HoodieWithZipper).click()
+            cy.get(product).click()
         })
     }
 
