@@ -5,18 +5,17 @@ workflows:
   build:
     jobs:
         - cypress/install
-           
-        
-           
            - cypress run:
-             record: true 
-             group: e2e/TS1 
-             spec: 'cypress/e2e/TS1/**/*'
+             store_artifacts: true  
+             group: 'e2e/TS'   
+             spec: cypress/e2e/TS1/**/*
+
            - cypress run:
-            --record --group e2e/TS2 --spec 'cypress/e2e/TS2/**/*'
-           
-           
             store_artifacts: true
+            group: 'e2e/TS2'
+            spec: cypress/e2e/TS2/**/*
+           
+  
             parallel: true
             parallelism: 2
             group: 2 machnines
