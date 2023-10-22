@@ -7,19 +7,11 @@ workflows:
         - cypress/install
            - cypress/run:
              store_artifacts: true  
-                
              spec: cypress/e2e/TS1/**/*
 
-           - cypress/run:
-            store_artifacts: true
-            group: 'e2e/TS2'
-            spec: cypress/e2e/TS2/**/*
+           
            
   
-            parallel: true
-            parallelism: 2
-            group: 2 machnines
-
             
 
         
