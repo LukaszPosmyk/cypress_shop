@@ -7,7 +7,7 @@ workflows:
         - cypress/install
            - cypress/run:
              store_artifacts: true  
-             group: 'e2e/TS'   
+                
              spec: cypress/e2e/TS1/**/*
 
            - cypress/run:
