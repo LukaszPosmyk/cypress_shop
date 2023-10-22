@@ -5,8 +5,6 @@ workflows:
   build:
     jobs:
         - cypress/install
-            cypress run --record --group TS1 --spec 'cypress/e2e/TS1/**/*'
-            cypress run --record --group TS2 --spec 'cypress/e2e/TS2/**/*'
            
         - cypress/run:
             requires:
@@ -15,6 +13,9 @@ workflows:
             parallel: true
             parallelism: 2
             group: 2 machnines
+
+            cypress run --record --group TS1 --spec 'cypress/e2e/TS1/**/*'
+            cypress run --record --group TS2 --spec 'cypress/e2e/TS2/**/*'
 
         
     
