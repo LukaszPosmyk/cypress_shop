@@ -6,9 +6,7 @@ workflows:
     jobs:
         - cypress/install
            
-        - cypress/run:
-            requires:
-             - cypress/install
+        
            
            cypress run --record --group e2e/TS1 --spec 'cypress/e2e/TS1/**/*'
            cypress run --record --group e2e/TS2 --spec 'cypress/e2e/TS2/**/*'
