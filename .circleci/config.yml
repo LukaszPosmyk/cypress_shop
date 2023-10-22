@@ -9,7 +9,9 @@ workflows:
         
            
            - cypress run:
-            --record --group e2e/TS1 --spec 'cypress/e2e/TS1/**/*'
+             record: true 
+             group: e2e/TS1 
+             spec: 'cypress/e2e/TS1/**/*'
            - cypress run:
             --record --group e2e/TS2 --spec 'cypress/e2e/TS2/**/*'
            
