@@ -5,12 +5,12 @@ workflows:
   build:
     jobs:
         - cypress/install
-           - cypress run:
+           - cypress/run:
              store_artifacts: true  
              group: 'e2e/TS'   
              spec: cypress/e2e/TS1/**/*
 
-           - cypress run:
+           - cypress/run:
             store_artifacts: true
             group: 'e2e/TS2'
             spec: cypress/e2e/TS2/**/*
