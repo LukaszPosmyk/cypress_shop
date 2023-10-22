@@ -6,8 +6,7 @@ workflows:
     jobs:
         - cypress/install
         - cypress/run:
-            requires:
-            - cypress/install
+             record: true
              spec: cypress/e2e/TS1.cy.js
 
            
