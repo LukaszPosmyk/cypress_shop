@@ -9,13 +9,17 @@ workflows:
         - cypress/run:
             requires:
              - cypress/install
+           
+           cypress run --record --group TS1 --spec 'cypress/e2e/TS1/**/*'
+           cypress run --record --group TS2 --spec 'cypress/e2e/TS2/**/*'
+           
+           
             store_artifacts: true
             parallel: true
             parallelism: 2
             group: 2 machnines
 
-            cypress run --record --group TS1 --spec 'cypress/e2e/TS1/**/*'
-            cypress run --record --group TS2 --spec 'cypress/e2e/TS2/**/*'
+            
 
         
     
